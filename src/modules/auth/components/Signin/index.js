@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import { setDefaults, withTranslation } from 'react-i18next';
 import { getActiveTokenAccount } from '@wallet/utils/account';
-import { login } from '@auth/store/action';
+// import { login } from '@auth/store/action';
 import { settingsUpdated } from 'src/modules/settings/store/actions';
 import Login from './login';
 
@@ -22,7 +22,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  login,
+  // login,
   settingsUpdated,
 };
 

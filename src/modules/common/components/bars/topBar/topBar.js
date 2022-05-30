@@ -14,7 +14,7 @@ import Search from '@search/components/Search';
 import styles from './topBar.css';
 import Network from './networkName';
 import NavigationButtons from './navigationButtons';
-import SignOut from './signOut';
+// import SignOut from './signOut';
 
 const TopBar = ({
   t,
