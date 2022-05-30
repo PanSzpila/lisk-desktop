@@ -1,13 +1,13 @@
 /* eslint-disable max-lines */
-import { to } from 'await-to-js';
-import { toast } from 'react-toastify';
-import loginTypes from 'src/modules/auth/const/loginTypes';
-import { tokenMap } from '@token/fungible/consts/tokens';
-import { extractAddress as extractBitcoinAddress } from '@wallet/utils/api';
-import { getConnectionErrorMessage } from '@network/utils/getNetwork';
-import { extractKeyPair } from '@wallet/utils/account';
-import { getAccounts } from '@wallet/store/action';
-import { defaultDerivationPath } from 'src/utils/explicitBipKeyDerivation';
+// import { to } from 'await-to-js';
+// import { toast } from 'react-toastify';
+// import loginTypes from 'src/modules/auth/const/loginTypes';
+// import { tokenMap } from '@token/fungible/consts/tokens';
+// import { extractAddress as extractBitcoinAddress } from '@wallet/utils/api';
+// import { getConnectionErrorMessage } from '@network/utils/getNetwork';
+// import { extractKeyPair } from '@wallet/utils/account';
+// import { getAccounts } from '@wallet/store/action';
+// import { defaultDerivationPath } from 'src/utils/explicitBipKeyDerivation';
 import actionTypes from './actionTypes';
 
 /**
@@ -15,10 +15,9 @@ import actionTypes from './actionTypes';
  * while already logged in
  *
  * @returns {Object} - Action object
- */
 export const accountLoggedOut = () => ({
   type: actionTypes.accountLoggedOut,
-});
+}); */
 
 /**
  * Fires an action to reset the account automatic sign out timer
@@ -42,7 +41,6 @@ export const accountLoading = () => ({
  * @param {String} data.publicKey - Lisk publicKey used for hardware wallet login
  * @param {Object} data.hwInfo - info about hardware wallet we're trying to login to
  */
-export const login = () => {};
 /** export const login = ({
   passphrase, publicKey, hwInfo,
 }) =>
