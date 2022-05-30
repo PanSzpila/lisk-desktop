@@ -1,16 +1,19 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import {
+  useSelector,
+  // useDispatch,
+} from 'react-redux';
 import { withTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import account from '@wallet/configuration/constants';
+// import account from '@wallet/configuration/constants';
 import routes, { modals } from '@screens/router/routes';
-import { accountLoggedOut } from '@auth/store/action';
+// import { accountLoggedOut } from '@auth/store/action';
 import Icon from 'src/theme/Icon';
 import { selectActiveToken } from '@common/store';
 import DialogLink from 'src/theme/dialog/link';
 import styles from './sideBar.css';
-import AutoSignOut from './autoSignOut';
-import WarningAutoSignOut from './autoSignOut/warning';
+// import AutoSignOut from './autoSignOut';
+// import WarningAutoSignOut from './autoSignOut/warning';
 import menuLinks from './menuLinks';
 
 const Inner = ({ data, pathname, sideBarExpanded }) => {
@@ -71,7 +74,7 @@ const MenuLink = ({
   );
 };
 
-const getWarningTime = (expireTime) => {
+/** const getWarningTime = (expireTime) => {
   if (!expireTime) {
     return null;
   }
@@ -102,7 +105,7 @@ const AutoSignOutWrapper = () => {
       <WarningAutoSignOut warningTime={warningTime} expireTime={expireTime} />
     </div>
   );
-};
+}; */
 
 const SideBar = ({ t, location }) => {
   const items = menuLinks(t);
