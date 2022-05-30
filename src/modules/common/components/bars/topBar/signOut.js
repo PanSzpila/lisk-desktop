@@ -1,19 +1,22 @@
 import React from 'react';
 // import { useDispatch } from 'react-redux';
-import routes from '@screens/router/routes';
+// import routes from '@screens/router/routes';
 import Icon from 'src/theme/Icon';
 import Tooltip from 'src/theme/Tooltip';
 import Piwik from 'src/utils/piwik';
 // import { accountLoggedOut } from '@auth/store/action';
 import styles from './topBar.css';
 
-const SignOut = ({ t, history }) => {
+const SignOut = ({
+  t,
+  // history,
+}) => {
   // const dispatch = useDispatch();
 
   const signOut = () => {
     Piwik.trackingEvent('Header', 'button', 'Open logout dialog');
     // dispatch(accountLoggedOut());
-    history.replace(`${routes.login.path}`);
+    // history.replace(`${routes.login.path}`);
   };
 
   return (
