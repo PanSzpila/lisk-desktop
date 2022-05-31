@@ -20,7 +20,7 @@ Given(/^Network is set to ([^\s]+)$/, function (network) {
     JSON.stringify({ ...settings, 'showNetwork': true, network: { name: network, address:networks[network].serviceUrl } }));
 });
 
-Given(/^I login as ([^\s]+) on ([^\s]+)$/, function (account, network) {
+/** Given(/^I login as ([^\s]+) on ([^\s]+)$/, function (account, network) {
   cy.visit(urls.login);
   cy.get(ss.networkDropdown).click();
   cy.get(ss.networkOptions).eq(2).click();
@@ -40,7 +40,7 @@ Given(/^I login$/, function () {
   cy.server();
   cy.get(ss.loginBtn).should('be.enabled');
   cy.get(ss.loginBtn).click();
-});
+}); */
 
 Then(/^I enter the passphrase of ([^\s]+)$/, function (accountName) {
   const passphrase = accounts[accountName]['passphrase'];
@@ -86,8 +86,8 @@ Given(/^I am on (.*?) page$/, function (page) {
     case 'send':
       cy.visit(urls.send);
       break;
-    case 'login':
-      cy.visit(urls.login);
+    /** case 'login':
+      cy.visit(urls.login); */
       break;
     default:
       cy.visit(urls[page]);
