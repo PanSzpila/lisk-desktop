@@ -2,14 +2,16 @@ import { MODULE_ASSETS_NAME_ID_MAP } from '@transaction/configuration/moduleAsse
 import { fromRawLsk, delay } from '@token/fungible/utils/lsk';
 import { getActiveTokenAccount } from '@wallet/utils/account';
 import {
-  accountDataUpdated, emptyTransactionsData, transactionsRetrieved,
+  accountDataUpdated,
+  // emptyTransactionsData,
+  transactionsRetrieved,
 } from '@common/store/actions';
 import { getTransactions } from '@transaction/api';
 import i18n from 'src/utils/i18n/i18n';
 import blockActionTypes from '@block/store/actionTypes';
 import settingsActionTypes from 'src/modules/settings/store/actionTypes';
 // import { selectActiveToken } from '@common/store/selectors';
-import actionTypes from './actionTypes';
+// import actionTypes from './actionTypes';
 
 const filterIncomingTransactions = (transactions, account) =>
   transactions.filter(transaction => (

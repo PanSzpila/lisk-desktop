@@ -1,5 +1,6 @@
 import {
-  accountDataUpdated, transactionsRetrieved, emptyTransactionsData,
+  accountDataUpdated, transactionsRetrieved,
+  // emptyTransactionsData,
 } from '@common/store/actions';
 
 import commonActionTypes from '@common/store/actions/actionTypes';
@@ -7,7 +8,7 @@ import blockActionTypes from '@block/store/actionTypes';
 import settingsActionTypes from 'src/modules/settings/store/actionTypes';
 import * as transactionApi from '@transaction/api';
 import { getAutoLogInData } from 'src/utils/login';
-import walletActionTypes from './actionTypes';
+// import walletActionTypes from './actionTypes';
 import middleware from './middleware';
 
 jest.mock('src/utils/history');
