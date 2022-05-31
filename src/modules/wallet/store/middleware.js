@@ -74,14 +74,14 @@ const accountMiddleware = store => next => async (action) => {
     case blockActionTypes.newBlockCreated:
       await checkTransactionsAndUpdateAccount(store, action);
       break;
-    case actionTypes.accountLoggedOut:
+    // case actionTypes.accountLoggedOut:
       /* Reset active token setting so in case BTC is selected,
       the Lisk monitoring features are available and Lisk is selected on the next login */
       // store.dispatch(settingsUpdated({
       //   token: { active: activeToken },
       // }));
-      store.dispatch(emptyTransactionsData());
-      break;
+      // store.dispatch(emptyTransactionsData());
+      // break;
     case settingsActionTypes.settingsUpdated:
       if (action.data.token && store.getState().wallet.info) {
         store.dispatch(accountDataUpdated('enabled'));

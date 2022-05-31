@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-import routes from '@screens/router/routes';
+// import routes from '@screens/router/routes';
 import Tooltip from 'src/theme/Tooltip';
 import DialogLink from 'src/theme/dialog/link';
 import Icon from 'src/theme/Icon';
@@ -9,7 +9,7 @@ import styles from 'src/modules/common/components/bars/topBar/topBar.css';
 
 const SignedInTip = ({ t }) => <p>{t('Voting queue')}</p>;
 
-const SignedOutTip = ({ t }) => (
+/** const SignedOutTip = ({ t }) => (
   <div className={styles.signedOutTip}>
     <b>{t('Please sign in')}</b>
     <p>
@@ -19,7 +19,7 @@ const SignedOutTip = ({ t }) => (
     </p>
     <Link to={routes.login.path}>{t('Sign in')}</Link>
   </div>
-);
+); */
 
 const VoteQueueToggle = ({
   t, noOfVotes, isUserLogout, disabled,
@@ -43,7 +43,8 @@ const VoteQueueToggle = ({
       </DialogLink>
     )}
   >
-    {isUserLogout ? <SignedOutTip t={t} /> : <SignedInTip t={t} />}
+    {/** isUserLogout ? <SignedOutTip t={t} /> : <SignedInTip t={t} /> */}
+    <SignedInTip t={t} />
   </Tooltip>
 );
 
