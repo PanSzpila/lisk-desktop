@@ -3,7 +3,7 @@ import history from 'src/utils/history';
 import actionTypes from '@wallet/store/actionTypes';
 
 const checkAccountMigrationState = (action) => {
-  if (action.type === actionTypes.accountLoggedIn || action.type === actionTypes.accountUpdated) {
+  if (action.type === actionTypes.accountUpdated) {
     const { isMigrated } = action.data.info.LSK.summary;
     // we need to check against false, check against falsy won't work
     if (isMigrated === false) {
