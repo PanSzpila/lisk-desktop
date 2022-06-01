@@ -20,28 +20,6 @@ Given(/^Network is set to ([^\s]+)$/, function (network) {
     JSON.stringify({ ...settings, 'showNetwork': true, network: { name: network, address:networks[network].serviceUrl } }));
 });
 
-/** Given(/^I login as ([^\s]+) on ([^\s]+)$/, function (account, network) {
-  cy.visit(urls.login);
-  cy.get(ss.networkDropdown).click();
-  cy.get(ss.networkOptions).eq(2).click();
-  cy.get(ss.addressInput).clear().type(networks[network].serviceUrl);
-  cy.get(ss.connectButton).click();
-
-  cy.get(ss.passphraseInput).first().click();
-  cy.get(ss.passphraseInput).each(($el, index) => {
-    const passphraseWordsArray = accounts[account].passphrase.split(' ');
-    cy.wrap($el, { log: false }).type(passphraseWordsArray[index], { log: false });
-  });
-  cy.get(ss.loginBtn).should('be.enabled');
-  cy.get(ss.loginBtn).click();
-});
-
-Given(/^I login$/, function () {
-  cy.server();
-  cy.get(ss.loginBtn).should('be.enabled');
-  cy.get(ss.loginBtn).click();
-}); */
-
 Then(/^I enter the passphrase of ([^\s]+)$/, function (accountName) {
   const passphrase = accounts[accountName]['passphrase'];
   cy.get(ss.passphraseInput).first().click();
@@ -85,9 +63,6 @@ Given(/^I am on (.*?) page$/, function (page) {
       break;
     case 'send':
       cy.visit(urls.send);
-      break;
-    /** case 'login':
-      cy.visit(urls.login); */
       break;
     default:
       cy.visit(urls[page]);

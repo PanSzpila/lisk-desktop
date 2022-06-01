@@ -1,14 +1,10 @@
-import {
-  accountDataUpdated, transactionsRetrieved,
-  // emptyTransactionsData,
-} from '@common/store/actions';
+import { accountDataUpdated, transactionsRetrieved } from '@common/store/actions';
 
 import commonActionTypes from '@common/store/actions/actionTypes';
 import blockActionTypes from '@block/store/actionTypes';
 import settingsActionTypes from 'src/modules/settings/store/actionTypes';
 import * as transactionApi from '@transaction/api';
 import { getAutoLogInData } from 'src/utils/login';
-// import walletActionTypes from './actionTypes';
 import middleware from './middleware';
 
 jest.mock('src/utils/history');
@@ -238,16 +234,6 @@ describe('Account middleware', () => {
       expect(store.dispatch).not.toHaveBeenCalledTimes(liskAPIClientMock);
     });
   });
-
-  /** describe('on accountLoggedOut', () => {
-    it('should clean up', () => {
-      const accountLoggedOutAction = {
-        type: walletActionTypes.accountLoggedOut,
-      };
-      middleware(store)(next)(accountLoggedOutAction);
-      expect(emptyTransactionsData).toHaveBeenCalled();
-    });
-  }); */
 
   describe('on accountSettingsUpdated', () => {
     it('Account Setting Update Sucessful', () => {

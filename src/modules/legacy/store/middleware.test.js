@@ -1,6 +1,4 @@
 import blockActionTypes from '@block/store/actionTypes';
-// import routes from '@screens/router/routes';
-// import history from 'src/utils/history';
 import walletActionTypes from '@wallet/store/actionTypes';
 import middleware from './middleware';
 
@@ -48,23 +46,6 @@ describe('Legacy middleware', () => {
   });
 
   describe('on accountUpdated', () => {
-    /** it('should not redirect to the reclaim screen if the account is migrated', async () => {
-      const action = {
-        type: walletActionTypes.accountLoggedIn,
-        data: { info: { LSK: { summary: { isMigrated: true } } } },
-      };
-      middleware()(next)(action);
-      expect(history.push).not.toHaveBeenCalledWith(routes.reclaim.path);
-    });
-
-    it('should redirect to the reclaim screen if the account is not migrated', async () => {
-      const action = {
-        type: walletActionTypes.accountLoggedIn,
-        data: { info: { LSK: { summary: { isMigrated: false } } } },
-      };
-      middleware()(next)(action);
-      expect(history.push).toHaveBeenCalledWith(routes.reclaim.path);
-    }); */
     it('should not redirect to the reclaim screen if the account is migrated with actionUpdate', async () => {
       const action = {
         type: walletActionTypes.accountUpdated,

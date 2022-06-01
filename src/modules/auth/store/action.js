@@ -1,15 +1,6 @@
 import actionTypes from './actionTypes';
 
 /**
- * Trigger this action to log out of the account
- * while already logged in
- *
- * @returns {Object} - Action object
-export const accountLoggedOut = () => ({
-  type: actionTypes.accountLoggedOut,
-}); */
-
-/**
  * Fires an action to reset the account automatic sign out timer
  * @param {Date} date - Current date
  */
