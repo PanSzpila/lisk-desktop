@@ -59,7 +59,6 @@ describe('TopBar', () => {
       active: 'LSK',
       list: {
         LSK: true,
-        BTC: false,
       },
     },
     network: {
@@ -184,5 +183,13 @@ describe('TopBar', () => {
     wrapper.find('.bookmark-list-toggle').first().simulate('click');
     wrapper.find('.search-toggle').first().simulate('click');
     expect(props.history.push).not.toHaveBeenCalled();
+  });
+
+  it('Should display tooltip on voting queue', () => {
+    const wrapper = mountWithRouter(TopBar, {
+      ...props,
+      account: undefined,
+    });
+    expect(wrapper).toContainMatchingElement('.sign-out-tip');
   });
 });

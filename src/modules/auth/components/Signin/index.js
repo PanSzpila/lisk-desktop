@@ -1,8 +1,7 @@
 /* istanbul ignore file */
 import { connect } from 'react-redux';
 import { setDefaults, withTranslation } from 'react-i18next';
-import { getActiveTokenAccount } from '@wallet/utils/account';
-// import { login } from '@auth/store/action';
+import { selectActiveTokenAccount } from '@common/store';
 import { settingsUpdated } from 'src/modules/settings/store/actions';
 import Login from './login';
 
@@ -16,13 +15,12 @@ setDefaults({
 });
 
 const mapStateToProps = state => ({
-  account: getActiveTokenAccount(state),
+  account: selectActiveTokenAccount(state),
   network: state.network,
   settings: state.settings,
 });
 
 const mapDispatchToProps = {
-  // login,
   settingsUpdated,
 };
 
