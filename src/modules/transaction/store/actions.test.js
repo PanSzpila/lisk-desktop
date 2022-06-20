@@ -1,6 +1,6 @@
 import loginTypes from 'src/modules/auth/const/loginTypes';
 import * as hwManager from '@transaction/utils/hwManager';
-import httpApi from '@common/utilities/api/http';
+import httpApi from 'src/utils/api/http';
 import * as transactionUtils from '@transaction/utils/transaction';
 import { getState } from '@tests/fixtures/transactions';
 import { sampleTransaction } from '@tests/constants/transactions';
@@ -22,7 +22,7 @@ import {
 
 jest.mock('@dpos/validator/api');
 jest.mock('@transaction/utils/hwManager');
-jest.mock('@common/utilities/api/http');
+jest.mock('src/utils/api/http');
 
 describe('actions: transactions', () => {
   beforeEach(() => {
