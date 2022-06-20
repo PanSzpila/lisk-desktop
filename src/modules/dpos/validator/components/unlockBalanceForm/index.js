@@ -13,7 +13,7 @@ import {
   selectActiveToken,
   selectCurrentBlockHeight,
   selectActiveTokenAccount,
-} from '@common/store';
+} from 'src/redux/selectors';
 import Form from './unlockBalanceForm';
 import BalanceTable from './unlockBalanceTable';
 

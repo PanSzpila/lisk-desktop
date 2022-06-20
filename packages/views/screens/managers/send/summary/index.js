@@ -2,12 +2,12 @@
 import { connect } from 'react-redux';
 import { withTranslation } from 'react-i18next';
 
-import { selectActiveTokenAccount, selectActiveToken } from '@common/store';
+import { selectActiveTokenAccount, selectActiveToken } from 'src/redux/selectors';
 import {
   resetTransactionResult,
   transactionDoubleSigned,
   transactionCreated,
-} from '@common/store/actions';
+} from 'src/redux/actions';
 import Summary from './summary';
 
 const mapStateToProps = state => ({

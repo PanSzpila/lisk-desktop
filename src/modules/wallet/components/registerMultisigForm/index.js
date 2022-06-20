@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { selectActiveTokenAccount } from '@common/store';
+import { selectActiveTokenAccount } from 'src/redux/selectors';
 import FormComp from './form';
 
 const Form = (props) => {

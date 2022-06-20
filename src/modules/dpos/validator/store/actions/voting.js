@@ -2,7 +2,7 @@ import to from 'await-to-js';
 import { tokenMap } from '@token/fungible/consts/tokens';
 import { toRawLsk } from '@token/fungible/utils/lsk';
 import { MODULE_ASSETS_NAME_ID_MAP } from '@transaction/configuration/moduleAssets';
-import { selectCurrentBlockHeight } from '@common/store/selectors';
+import { selectCurrentBlockHeight } from 'src/redux/selectors';
 import { create } from '@transaction/api';
 import { getUnlockableUnlockObjects } from '@wallet/utils/account';
 import { getAccount } from '@wallet/utils/api';
